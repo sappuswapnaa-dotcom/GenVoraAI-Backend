@@ -251,7 +251,7 @@ async def chat(req: ChatRequest, request: Request):
         )
 
     request_id = str(uuid.uuid4())
-    model = req.model or GEMINI_MODEL
+    model = GEMINI_MODEL
 
     try:
         reply = await call_gemini(req, model)
